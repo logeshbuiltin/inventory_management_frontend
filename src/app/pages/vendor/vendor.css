@@ -1,0 +1,8 @@
+
+        .hero-value { letter-spacing: -0.04em; }
+        .matte-shadow { box-shadow: 0 20px 40px rgba(23, 28, 31, 0.06); }
+        .abstract-bg {
+            background: linear-gradient(135deg, #14258808 0%, #ffffff 50%, #14258805 100%);
+            background-attachment: fixed;
+        }
+    

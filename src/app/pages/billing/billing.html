@@ -1,0 +1,235 @@
+<div class="bg-background text-on-background antialiased flex h-screen overflow-hidden w-full">
+
+<!-- SideNavBar (JSON Derived) -->
+<app-sidebar></app-sidebar>
+<main class="flex-1 flex flex-col h-full bg-abstract relative z-10">
+<!-- TopNavBar (JSON Derived) -->
+    <!-- Universal Top Header Component -->
+    <app-header [pageName]="'Supermarket Billing'"></app-header>
+<!-- Sub-header: Multi-bill switching -->
+<div class="px-6 py-3 flex items-center justify-between">
+<div class="flex gap-2">
+<button class="px-5 py-2 bg-surface-container-lowest text-primary font-bold rounded-xl matte-shadow border-b-4 border-primary">Bill 1</button>
+<button class="px-5 py-2 bg-surface-container-low text-on-surface-variant font-medium rounded-xl hover:bg-surface-container transition-colors">Draft 2</button>
+<button class="p-2 text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div class="flex items-center gap-2 px-4 py-2 bg-white/50 rounded-xl border border-outline-variant/20">
+<span class="text-slate-500">Price List:</span>
+<span class="font-bold text-primary">Retail Standard</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-white/50 rounded-xl border border-outline-variant/20">
+<span class="text-slate-500">Customer:</span>
+<span class="font-bold text-secondary">Counter Sale</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex gap-6 px-6 pb-6 overflow-hidden">
+<!-- Left: Product Grid -->
+<section class="flex-[1.5] flex flex-col gap-4 overflow-hidden">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-extrabold tracking-tight text-on-surface">Inventory Matrix</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold text-on-surface-variant">Beverages</span>
+<span class="px-3 py-1 bg-primary text-on-primary rounded-full text-xs font-bold">All Categories</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold text-on-surface-variant">Dairy</span>
+</div>
+</div>
+<div class="grid grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto pr-2 custom-scrollbar">
+<!-- Product Card 1 -->
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all duration-300">
+<div class="w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Premium Coffee Beans" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="close-up of roasted premium coffee beans in a matte black ceramic bowl with morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyhV3Ppboyyi6BdUHtsm5IHhGMs3alJwyfITLOVlvQE-gf3mZlTPLRW4ormiGoDS-MCQpgCVipO8jKnpsryKpTSiqXZzc-yrWFthVYwC1gNxmILEH68UHRPkA0DJ5axJKxhR-0exKzHUUZWdsksUdxZqaSboMIXUVIQQKUyitmct5q97P155Sxqzl4vKZTbaWWkoTligbQXcN4v1Ib8Tj1JkdMounX0Il05Ro9FNFxpk9GXg4zqhTTlguFCaoLxXovbybhJIT-y3I"/>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 group-hover:text-primary-fixed uppercase tracking-wider">SKU: CF-092</p>
+<h3 class="font-bold text-on-surface group-hover:text-on-primary text-sm truncate">Dark Roast Arabica</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary group-hover:text-on-primary">₹850.00</span>
+<span class="text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded uppercase">In Stock</span>
+</div>
+</div>
+</button>
+<!-- Product Card 2 -->
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all duration-300">
+<div class="w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Organic Honey" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="golden organic honey dripping from a wooden dipper in a bright rustic kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCY_BAV9hXCORMnMJFMa_i6b1-_vI3HXaANqX-iTaGTfe0IfI3bkCHuAsMNjaE5MCpS_AZJexyWez15N_GwrWVpbCT0gY4jjD0tuOSx9_0u37L-J0ckCBzkI4Y2QYMIZ7yq3jAfcP41oAFUPLu8MwIShjvXx0HveRVlY7qJkioVlv0Ex2lW4ALe5eX5i8AEGFXSHC6PNokkmtSr2T67BuEOh3n8FR6sAoOM1EJhHzHA5j4KIsA5NjxUEtRSGCUO5FNN12zk0566E"/>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 group-hover:text-primary-fixed uppercase tracking-wider">SKU: HN-441</p>
+<h3 class="font-bold text-on-surface group-hover:text-on-primary text-sm truncate">Wildflower Honey</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary group-hover:text-on-primary">₹420.00</span>
+<span class="text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded uppercase">24 Units</span>
+</div>
+</div>
+</button>
+<!-- Product Card 3 -->
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all duration-300 border-2 border-dashed border-primary/20">
+<div class="w-full h-32 rounded-lg bg-surface-container-low flex items-center justify-center text-primary/40">
+<span class="material-symbols-outlined text-4xl" data-icon="add_a_photo">add_a_photo</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">SKU: ---</p>
+<h3 class="font-bold text-on-surface text-sm truncate">Custom Entry</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary">₹0.00</span>
+<span class="text-[10px] font-bold bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded uppercase">Manual</span>
+</div>
+</div>
+</button>
+<!-- More cards for visual density -->
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all">
+<div class="w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Fresh Milk" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="glass bottle of fresh cold milk on a wooden table with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKnlT6D7zzCYjOxKrZh-b5nhV24rJWb-zYZCD5R2rmjBiLpsRjfr9aFsXQFeAtaC_QU5TYgUWfPSc5LfD6lj9TOZsLF0QPlGW52TLui0aLWBo5IOOeGd5qw7Kicjy7FFyvhXZBTfPPTmyljncSFUka0p88XfpMW4yJ2Zov8yKJDvYFC3qxogrin3FFHLMv4bYz0cc99-K6tgINaZVcGMYQEF8G-_LaaKGV1nh4w7TutJHwGrXookXUHZvnSxBfeRO3yN-c1I4wtIE"/>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 group-hover:text-primary-fixed uppercase tracking-wider">SKU: DY-001</p>
+<h3 class="font-bold text-on-surface group-hover:text-on-primary text-sm truncate">A2 Whole Milk</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary group-hover:text-on-primary">₹75.00</span>
+<span class="text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded uppercase">Stock OK</span>
+</div>
+</div>
+</button>
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all">
+<div class="w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Gourmet Pasta" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="artisan dried pasta arranged on a white stone surface with sprigs of fresh herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu2NT6wwUEj7xbx9ivgM5KKgFXGsKvamuqqN1KF-acZDCCDfQ1lvN2xDM8f4Ili8NsGZrRvjRmrw6pBU-wTAs8dR0dZ1OFXu2AlLNpC9uVS2KcQxBO4gkmlfF_xQWQ8E-Myhou5J0p7uGAKqAq0IVhTg8CDBxPteomHjhsKGuYrglX1s8dmd40RmP9fANTRlA6scspNUVeKhxIb8lJ-zXbDAyL35AxY6SOiEaXr4UafxowUZOX7V-EVXii7LAVndNQEMDPVZBtBSY"/>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 group-hover:text-primary-fixed uppercase tracking-wider">SKU: GR-122</p>
+<h3 class="font-bold text-on-surface group-hover:text-on-primary text-sm truncate">Penne Rigate 1kg</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary group-hover:text-on-primary">₹225.00</span>
+<span class="text-[10px] font-bold bg-error-container text-on-error-container px-2 py-0.5 rounded uppercase">Low Stock</span>
+</div>
+</div>
+</button>
+<button class="group bg-surface-container-lowest p-4 rounded-xl matte-shadow text-left flex flex-col gap-3 hover:bg-primary transition-all">
+<div class="w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Mineral Water" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="premium bottled mineral water with condensation in a high-end luxury lifestyle setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwFsqzIDevKN8F1knuGts9b-n4MueKZf7YzXtao9M4VxWFQbi2KWlg8k4Kr5hS64WkU850M5SEf_DgWIbVnAXeMVyrfHWZwTpPV9KHou9j_xu10SnpmQjrMC1UgmKHx143ZYpfGIgicVefT6Jem7XoaJyFGUNIW5whaRYphdrPHfkqbf2eJuL-0YFDM2wH5DzH-KXZPj7-ESP0U8xDnZIYGbyIhTRwvkROh-lSVzuIMIk_r6phXIdRxUF8v7J9WJeC9VEG9F29t2A"/>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 group-hover:text-primary-fixed uppercase tracking-wider">SKU: BV-882</p>
+<h3 class="font-bold text-on-surface group-hover:text-on-primary text-sm truncate">Alkaline Water 500ml</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="text-lg font-black text-primary group-hover:text-on-primary">₹45.00</span>
+<span class="text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded uppercase">Stock OK</span>
+</div>
+</div>
+</button>
+</div>
+</section>
+<!-- Right: Digital Bill -->
+<section class="flex-1 flex flex-col bg-surface-container-lowest rounded-2xl matte-shadow overflow-hidden border border-white/40">
+<div class="p-6 border-b border-surface-container-low">
+<div class="flex justify-between items-center mb-1">
+<h2 class="text-xl font-black tracking-tight text-primary uppercase">Current Invoice</h2>
+<span class="text-[10px] font-bold bg-primary/10 text-primary px-3 py-1 rounded-full">INV-2024-00842</span>
+</div>
+<p class="text-xs text-slate-400 font-medium">Billed by: Terminal 04 • 12:44 PM</p>
+</div>
+<!-- Bill Items -->
+<div class="flex-1 overflow-y-auto p-4 space-y-3">
+<!-- Item Row -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-primary text-xs">01</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Dark Roast Arabica</h4>
+<p class="text-[10px] font-medium text-slate-500">Unit Price: ₹850.00 × 2</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">₹1,700.00</p>
+<div class="flex gap-1 justify-end">
+<span class="text-[8px] bg-white text-primary px-1 font-bold rounded">12% GST</span>
+</div>
+</div>
+</div>
+<!-- Item Row -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-primary text-xs">02</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">A2 Whole Milk</h4>
+<p class="text-[10px] font-medium text-slate-500">Unit Price: ₹75.00 × 4</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">₹300.00</p>
+<span class="text-[8px] bg-white text-primary px-1 font-bold rounded">5% GST</span>
+</div>
+</div>
+<!-- Item Row with Discount -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[8px] font-black uppercase">Party Discount Applied</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-primary text-xs">03</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Wildflower Honey</h4>
+<p class="text-[10px] font-medium text-slate-500">Unit Price: ₹420.00 × 1</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface line-through text-slate-400 text-xs">₹420.00</p>
+<p class="font-bold text-secondary">₹378.00</p>
+</div>
+</div>
+</div>
+<!-- Billing Summary -->
+<div class="p-6 bg-surface-container-high/50 border-t border-white/60 space-y-4">
+<div class="grid grid-cols-2 gap-x-8 gap-y-2 text-xs font-semibold text-on-surface-variant">
+<div class="flex justify-between">
+<span>Subtotal:</span>
+<span>₹2,378.00</span>
+</div>
+<div class="flex justify-between">
+<span>CGST:</span>
+<span>₹109.14</span>
+</div>
+<div class="flex justify-between">
+<span>SGST:</span>
+<span>₹109.14</span>
+</div>
+<div class="flex justify-between">
+<span>IGST:</span>
+<span>₹0.00</span>
+</div>
+<div class="flex justify-between col-span-2 pt-2 border-t border-outline-variant/20 text-secondary">
+<span>Total Savings:</span>
+<span>- ₹42.00</span>
+</div>
+</div>
+<div class="pt-4 text-center">
+<p class="text-[10px] uppercase tracking-widest font-black text-slate-400 mb-1">Grand Total Due</p>
+<h3 class="hero-value text-primary">₹2,596.28</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 mt-4">
+<button class="flex items-center justify-center gap-2 py-4 bg-white text-primary border-2 border-primary rounded-xl font-extrabold hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+                            Print
+                        </button>
+<button class="flex items-center justify-center gap-2 py-4 bg-primary text-on-primary rounded-xl font-extrabold shadow-xl shadow-primary/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                            Collect
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating Action Bar for Global POS Tasks -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-3">
+<button class="w-14 h-14 bg-tertiary text-on-tertiary rounded-full shadow-2xl flex items-center justify-center hover:rotate-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="settings_suggest">settings_suggest</span>
+</button>
+<button class="w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="support_agent">support_agent</span>
+</button>
+</div>
+
+</div>

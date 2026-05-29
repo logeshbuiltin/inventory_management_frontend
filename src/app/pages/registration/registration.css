@@ -1,0 +1,7 @@
+.matte-card {
+    box-shadow: 0 20px 40px rgba(23, 28, 31, 0.06);
+}
+.step-active {
+    color: #142588;
+    border-bottom: 3px solid #142588;
+}

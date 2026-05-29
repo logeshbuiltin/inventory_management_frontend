@@ -1,0 +1,116 @@
+<div class="text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed w-full">
+
+<!-- Top Navigation Anchor -->
+<header class="w-full top-0 left-0 flex justify-between items-center px-8 py-6 bg-transparent">
+<div class="text-2xl font-black text-[#142588] tracking-tighter">
+            Tactile Precision
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<button class="material-symbols-outlined text-[#171c1f] hover:bg-[#f0f4f8]/50 p-2 rounded-xl transition-colors">help</button>
+<button class="material-symbols-outlined text-[#171c1f] hover:bg-[#f0f4f8]/50 p-2 rounded-xl transition-colors">language</button>
+</nav>
+</header>
+<main class="max-w-6xl mx-auto px-6 py-12 flex flex-col items-center">
+<!-- Header Section -->
+<div class="w-full max-w-2xl mb-12 text-center md:text-left">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">Precision POS Registration</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Secure your business operations with our industrial-grade ledger system. Setup takes less than 5 minutes.</p>
+</div>
+<div class="w-full grid md:grid-cols-12 gap-8 items-start">
+<!-- Sidebar Progress (Desktop) -->
+<aside class="hidden md:block md:col-span-3 space-y-8 py-4">
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold">1</span>
+<span class="font-bold text-primary text-sm uppercase tracking-wider">Store Details</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant font-bold border border-outline-variant/15">2</span>
+<span class="font-medium text-on-surface-variant text-sm uppercase tracking-wider">Admin Account</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant font-bold border border-outline-variant/15">3</span>
+<span class="font-medium text-on-surface-variant text-sm uppercase tracking-wider">Preferences</span>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h4 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Need Assistance?</h4>
+<p class="text-sm text-on-surface-variant mb-4">Our onboarding specialists are available 24/7 for technical support.</p>
+<button class="text-primary font-bold text-sm hover:underline flex items-center gap-1">
+                        View documentation <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</aside>
+<!-- Main Form Card -->
+<section class="md:col-span-9 w-full">
+<div class="matte-card bg-surface-container-lowest rounded-xl p-8 md:p-12">
+<!-- Step 1: Store Details -->
+<div class="space-y-10" id="step-1">
+<div class="flex flex-col gap-2">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">Step 01 / 03</span>
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">Establish Your Store Identity</h2>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="col-span-2 space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Legal Business Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-4 focus:ring-0 focus:ring-offset-0 focus:border-b-2 focus:border-primary transition-all text-on-surface placeholder:text-outline" placeholder="e.g. Precision Global Retail" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">GSTIN / Tax ID</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-4 focus:ring-0 focus:ring-offset-0 focus:border-b-2 focus:border-primary transition-all text-on-surface placeholder:text-outline" placeholder="22AAAAA0000A1Z5" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Business Category</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl px-4 py-4 focus:ring-0 focus:ring-offset-0 focus:border-b-2 focus:border-primary transition-all text-on-surface">
+<option>General Retail</option>
+<option>Quick Service Restaurant</option>
+<option>Apparel &amp; Fashion</option>
+<option>Specialty Hardware</option>
+</select>
+</div>
+<div class="col-span-2 space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Primary Operations Address</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-xl px-4 py-4 focus:ring-0 focus:ring-offset-0 focus:border-b-2 focus:border-primary transition-all text-on-surface placeholder:text-outline" placeholder="Suite, Building, Street, Area" rows="3"></textarea>
+</div>
+</form>
+<!-- Action Bar -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-outline-variant/10">
+<p class="text-sm text-on-surface-variant/70 italic">All data is encrypted following ISO 27001 standards.</p>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="w-full md:w-auto px-8 py-4 text-primary font-bold hover:bg-surface-container-low rounded-xl transition-colors">Save Draft</button>
+<button class="w-full md:w-48 px-8 py-4 bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container transition-all flex justify-center items-center gap-2">
+                                    Next Step
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Info Blocks (Bento Style) -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary">security</span>
+<h4 class="font-bold text-on-surface">Data Sovereignty</h4>
+<p class="text-sm text-on-surface-variant">Your transaction logs are mirrored across three distinct regional nodes.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+<h4 class="font-bold text-on-surface">Instant Audits</h4>
+<p class="text-sm text-on-surface-variant">Compliance-ready reporting engine built into every registration tier.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+<h4 class="font-bold text-on-surface">0.2s Latency</h4>
+<p class="text-sm text-on-surface-variant">Optimized for high-volume retail terminals with 99.99% uptime SLA.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Identity -->
+<app-footer></app-footer>
+<!-- Abstract Decor Element -->
+<div class="fixed -bottom-32 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="fixed -top-32 -right-32 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+</div>

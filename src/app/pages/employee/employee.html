@@ -1,0 +1,232 @@
+<div class="bg-background text-on-background antialiased flex min-h-screen abstract-bg w-full">
+  <app-sidebar></app-sidebar>
+  <main class="flex-1 w-full relative">
+    <app-header [pageName]="'Employee Management'"></app-header>
+    
+    <div class="p-8 space-y-8 max-w-[1600px] mx-auto w-full">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h1 class="text-3xl font-bold text-on-surface tracking-tight mb-2">Employee Management</h1>
+<p class="text-on-surface-variant font-medium">Oversee your retail team and monitor performance in real-time.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 bg-secondary-container text-on-secondary-container rounded-full font-bold text-sm flex items-center gap-2 hover:bg-secondary-container/80 transition-all">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+                    View Payroll
+                </button>
+<button class="px-5 py-2.5 bg-surface-container-high text-on-surface rounded-full font-bold text-sm flex items-center gap-2 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    Manage Shifts
+                </button>
+<button class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-sm flex items-center gap-2 shadow-lg shadow-indigo-900/10 hover:shadow-xl transition-all">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+                    Add New Employee
+                </button>
+</div>
+</div>
+<!-- Quick Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="liquid-glass p-6 rounded-full flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Total Employees</p>
+<p class="text-2xl font-black text-indigo-950">42</p>
+</div>
+</div>
+<div class="liquid-glass p-6 rounded-full flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">potted_plant</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">On Shift</p>
+<p class="text-2xl font-black text-indigo-950">18</p>
+</div>
+</div>
+<div class="liquid-glass p-6 rounded-full flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">done_all</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Attendance (%)</p>
+<p class="text-2xl font-black text-indigo-950">96.4%</p>
+</div>
+</div>
+<div class="liquid-glass p-6 rounded-full flex items-center gap-4 border-teal-200">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Professional headshot of top performing female manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX_hvUYwMDRgffThiuD3dwLOE6I_A4IaaTC-spMw7KZAhmFptLPpzvb8bedU9U46e8IjK-K9savXTAT4zFcGc-KjGBJMJdQnRX2eGczBm5Zz9s_jGgzyLLPr7MOlh_nJ_Im5k0GodFu4OIJa-_82uuAnW3TMaa4AWIJbSqqQx84k3LSKXSlmyvo5W9tmLTEEwtNnXmowGs1LFxZGQMCbrUO4NNm0kwKpj76zLlNQxW8JoEojNE2nRHRb5RiOHb7zEJHi99pyn37zw"/>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-teal-600 font-bold">Top Performer</p>
+<p class="text-sm font-black text-indigo-950 truncate max-w-[120px]">Ananya Sharma</p>
+</div>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="mb-6 flex flex-wrap items-center gap-4">
+<div class="relative flex-1 max-w-md">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">filter_list</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-3 pl-12 pr-4 focus:ring-2 focus:ring-primary/10 text-sm font-medium" placeholder="Filter by name, role or ID..." type="text"/>
+</div>
+<div class="flex gap-2">
+<select class="bg-surface-container-low border-none rounded-full px-6 py-3 text-sm font-bold text-on-surface-variant appearance-none focus:ring-0">
+<option>All Roles</option>
+<option>Senior Cashier</option>
+<option>Floor Manager</option>
+<option>Store Associate</option>
+</select>
+<select class="bg-surface-container-low border-none rounded-full px-6 py-3 text-sm font-bold text-on-surface-variant appearance-none focus:ring-0">
+<option>All Departments</option>
+<option>Frontend</option>
+<option>Inventory</option>
+<option>Logistics</option>
+</select>
+</div>
+</div>
+<!-- Employee Overview Table -->
+<section class="liquid-glass rounded-3xl overflow-hidden">
+<div class="overflow-x-auto no-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-100/30">
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest">Name</th>
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest">Role</th>
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest">Shift Status</th>
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest">Last Login</th>
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest">Performance</th>
+<th class="px-8 py-5 text-[11px] font-black text-slate-500 uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100/20">
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center font-bold text-indigo-700">AK</div>
+<div>
+<p class="font-bold text-on-surface">Arjun Kapoor</p>
+<p class="text-xs text-slate-500 font-medium">EMP-7281</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="text-sm font-medium text-on-surface-variant">Floor Manager</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-sm font-bold text-secondary">Active</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<p class="text-sm text-on-surface-variant font-medium">10:42 AM Today</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex gap-1 text-teal-600">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<img class="w-10 h-10 rounded-xl object-cover" data-alt="Portrait of a male employee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMZiQdOg-_xHel6v6B1axElh16qwxo0kqyy3tmJ2Yb9EjGf2dBvSxz10OOOTPa2sc5g8DmJ09E4JAILsvTGoAY-E90mw_SymHjCzybFiuYLzXzhiKBamJuM2-lv1eahaw1Vs0LvLSBYoRCBxdxC2OwdUM9PTBKrUEh6lijoRWnsVUNuWReDqi1qDdRH1yL_hLZLobkkTB1NKeIFNw86rAzq0HzPPAjm3YVv1PEIiGXmZqyy6hlywToaPVmC5bObeezyL5xf0_sESE"/>
+<div>
+<p class="font-bold text-on-surface">Vikram Singh</p>
+<p class="text-xs text-slate-500 font-medium">EMP-3921</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="text-sm font-medium text-on-surface-variant">Senior Cashier</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<span class="text-sm font-bold text-slate-500">Inactive</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<p class="text-sm text-on-surface-variant font-medium">Yesterday, 9:00 PM</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex gap-1 text-teal-600">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center font-bold text-teal-700">PD</div>
+<div>
+<p class="font-bold text-on-surface">Priya Das</p>
+<p class="text-xs text-slate-500 font-medium">EMP-1102</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="text-sm font-medium text-on-surface-variant">Store Associate</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-sm font-bold text-secondary">Active</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<p class="text-sm text-on-surface-variant font-medium">08:15 AM Today</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex gap-1 text-teal-600">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-slate-100/10 flex justify-between items-center">
+<p class="text-xs font-medium text-slate-500">Showing 1 to 3 of 42 employees</p>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-primary transition-all"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">1</button>
+<button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-primary transition-all"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</section>
+<!-- Dynamic Pulse Indicator (The Luminous Element) -->
+<div class="fixed bottom-8 right-8 pointer-events-none">
+<div class="relative flex items-center justify-center w-4 h-4">
+<div class="absolute w-full h-full bg-teal-400/30 rounded-full animate-ping"></div>
+<div class="relative w-2 h-2 bg-teal-500 rounded-full shadow-lg shadow-teal-500/50"></div>
+</div>
+</div>
+    </div>
+  </main>
+</div>

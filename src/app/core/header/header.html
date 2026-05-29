@@ -1,0 +1,68 @@
+<header class="flex justify-between items-center px-8 w-full h-20 sticky top-0 left-0 z-30 bg-surface-container-low transition-all">
+  <div class="flex items-center gap-6">
+    <h2 class="text-primary font-black tracking-tighter text-xl">{{ pageName }}</h2>
+    
+    <div class="relative w-80 hidden md:block">
+      <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+      <input (input)="onSearch($event)" class="w-full bg-surface-container-high border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-outline transition-shadow" placeholder="Search resources or records..." type="text"/>
+    </div>
+  </div>
+  
+  <div class="flex items-center gap-6">
+    <div class="flex items-center gap-2 text-outline">
+      <button class="p-2 hover:text-primary transition-colors hover:bg-surface-container-highest rounded-full flex items-center justify-center relative group">
+        <span class="material-symbols-outlined transition-transform group-active:scale-95">qr_code_2</span>
+      </button>
+
+      <div class="relative">
+        <button (click)="toggleNotifications()" class="p-2 hover:text-primary transition-colors hover:bg-surface-container-highest rounded-full flex items-center justify-center relative group">
+          <span class="material-symbols-outlined transition-transform group-active:scale-95">notifications</span>
+          <span *ngIf="notifications.length > 0" class="absolute top-2.5 right-2 h-2 w-2 bg-error rounded-full shadow-md animate-pulse"></span>
+        </button>
+
+        <div *ngIf="showNotifications" class="absolute right-0 mt-2 w-80 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 overflow-hidden flex flex-col z-50">
+          <div class="px-4 py-3 border-b border-outline-variant/20 flex justify-between items-center bg-surface-container-low/50">
+            <p class="text-sm font-bold text-on-surface">Notifications</p>
+            <button class="text-[10px] uppercase font-bold text-primary hover:underline">Mark All Read</button>
+          </div>
+          <div class="max-h-[320px] overflow-y-auto no-scrollbar">
+            <div *ngFor="let note of notifications" class="p-4 border-b border-outline-variant/10 hover:bg-surface-container-low cursor-pointer transition-colors flex gap-4">
+              <div class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center"
+                   [ngClass]="{'bg-error-container text-error': note.type === 'error', 'bg-tertiary-container text-tertiary': note.type === 'warning', 'bg-primary-container text-primary': note.type === 'info'}">
+                <span class="material-symbols-outlined text-sm">{{ note.icon }}</span>
+              </div>
+              <div class="flex-1">
+                <p class="text-xs font-bold text-on-surface">{{ note.title }}</p>
+                <p class="text-xs text-on-surface-variant mt-1 leading-snug">{{ note.message }}</p>
+                <p class="text-[10px] text-outline mt-2 font-medium">{{ note.time }}</p>
+              </div>
+            </div>
+            <div *ngIf="notifications.length === 0" class="p-8 text-center text-outline">
+              <span class="material-symbols-outlined text-3xl mb-2">notifications_paused</span>
+              <p class="text-xs">No new notifications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-px h-6 bg-surface-container-highest mx-2"></div>
+
+      <div class="relative">
+        <button (click)="toggleUserMenu()" class="p-1 hover:text-primary transition-colors hover:bg-surface-container-highest rounded-full flex items-center justify-center relative group">
+          <span class="material-symbols-outlined text-[32px] transition-transform group-active:scale-95" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+        </button>
+
+        <div *ngIf="showUserMenu" class="absolute right-0 mt-2 w-48 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 overflow-hidden flex flex-col z-50">
+          <div class="px-4 py-3 border-b border-outline-variant/20">
+            <p class="text-sm font-bold text-on-surface">Alex Rivera</p>
+            <p class="text-[10px] text-outline uppercase tracking-widest">Administrator</p>
+          </div>
+          <button (click)="signOut()" class="flex items-center gap-2 px-4 py-3 text-sm font-bold text-error hover:bg-error-container hover:text-on-error-container transition-colors w-full text-left">
+            <span class="material-symbols-outlined text-[18px]">logout</span>
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

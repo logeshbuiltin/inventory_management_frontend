@@ -1,0 +1,242 @@
+<div class="flex bg-abstract-texture min-h-screen text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container w-full">
+
+<!-- SideNavBar Component -->
+<app-sidebar></app-sidebar>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full relative">
+<!-- TopNavBar Component -->
+    <!-- Universal Top Header Component -->
+    <app-header [pageName]="'Ledger Dashboard'"></app-header>
+<!-- Dashboard Grid -->
+<div class="p-8 space-y-8">
+<!-- Today's Sales Summary (Hero) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] matte-shadow flex flex-col justify-between">
+<div>
+<span class="text-xs font-black text-secondary tracking-[0.2em] uppercase">Today's Sales Volume</span>
+<div class="flex items-baseline gap-2 mt-4">
+<h3 class="text-[3.5rem] font-black tracking-[-0.04em] text-primary leading-none">$42,890.00</h3>
+<span class="text-secondary font-bold text-lg">+12.4%</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-12 mt-12">
+<div class="space-y-1">
+<p class="text-[0.75rem] font-medium text-outline">Transactions</p>
+<p class="text-2xl font-bold tracking-tight">1,204</p>
+</div>
+<div class="space-y-1">
+<p class="text-[0.75rem] font-medium text-outline">Avg Ticket</p>
+<p class="text-2xl font-bold tracking-tight">$35.62</p>
+</div>
+<div class="space-y-1">
+<p class="text-[0.75rem] font-medium text-outline">Peak Hour</p>
+<p class="text-2xl font-bold tracking-tight">12:30 PM</p>
+</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-10 rounded-[2rem] matte-shadow flex flex-col justify-between">
+<span class="text-xs font-black text-on-primary-container tracking-[0.2em] uppercase">Operational Pulse</span>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium opacity-80">Showroom Stock</span>
+<span class="text-lg font-bold">88%</span>
+</div>
+<div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed w-[88%] h-full rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium opacity-80">Godown Capacity</span>
+<span class="text-lg font-bold">64%</span>
+</div>
+<div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed w-[64%] h-full rounded-full"></div>
+</div>
+</div>
+<button class="w-full bg-on-primary text-primary py-4 rounded-xl font-bold text-sm mt-8">View Inventory Map</button>
+</div>
+</section>
+<!-- Inventory & Comparison Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Progress Comparison -->
+<div class="lg:col-span-2 bg-surface-container-low p-8 rounded-[2rem] flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-lg tracking-tight">Performance vs Weekly Avg</h4>
+<span class="material-symbols-outlined text-outline" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex items-end gap-3 h-40">
+<div class="flex-1 bg-surface-variant rounded-t-xl h-[60%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">Mon</div>
+</div>
+<div class="flex-1 bg-surface-variant rounded-t-xl h-[75%]"></div>
+<div class="flex-1 bg-surface-variant rounded-t-xl h-[55%]"></div>
+<div class="flex-1 bg-surface-variant rounded-t-xl h-[90%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[100%]"></div>
+<div class="flex-1 bg-surface-variant/30 rounded-t-xl h-[40%]"></div>
+<div class="flex-1 bg-surface-variant/30 rounded-t-xl h-[30%]"></div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Today's performance is tracking <span class="font-bold text-primary">18% higher</span> than the rolling 7-day average for Tuesdays.</p>
+</div>
+<!-- Category Breakdown -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] matte-shadow space-y-6">
+<h4 class="font-bold text-lg tracking-tight">Top Categories</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg" data-icon="local_dining">local_dining</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Grocery</p>
+<p class="text-[10px] text-outline">412 SKUs</p>
+</div>
+<span class="text-sm font-black">$12k</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-lg" data-icon="liquor">liquor</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Beverages</p>
+<p class="text-[10px] text-outline">188 SKUs</p>
+</div>
+<span class="text-sm font-black">$8.4k</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-lg" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Household</p>
+<p class="text-[10px] text-outline">256 SKUs</p>
+</div>
+<span class="text-sm font-black">$5.1k</span>
+</div>
+</div>
+</div>
+<!-- Real-time Alerts -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] matte-shadow border-t-4 border-error overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-lg tracking-tight text-error">Critical Alerts</h4>
+<span class="bg-error text-white text-[10px] font-black px-2 py-0.5 rounded-full">3 NEW</span>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-error-container rounded-xl flex gap-3 items-start">
+<span class="material-symbols-outlined text-error text-sm mt-0.5" data-icon="warning">warning</span>
+<div>
+<p class="text-xs font-bold text-on-error-container leading-none">Low Stock: Milk 2L</p>
+<p class="text-[10px] text-on-error-container opacity-70 mt-1">Remaining: 12 units</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex gap-3 items-start">
+<span class="material-symbols-outlined text-outline text-sm mt-0.5" data-icon="inventory">inventory</span>
+<div>
+<p class="text-xs font-bold text-on-surface leading-none">Aisle 4 Restock</p>
+<p class="text-[10px] text-outline mt-1">Scheduled: 2:00 PM</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex gap-3 items-start opacity-60">
+<span class="material-symbols-outlined text-outline text-sm mt-0.5" data-icon="verified_user">verified_user</span>
+<div>
+<p class="text-xs font-bold text-on-surface leading-none">Audit Completed</p>
+<p class="text-[10px] text-outline mt-1">Dairy Section: Clear</p>
+</div>
+</div>
+</div>
+<button class="w-full text-center text-[11px] font-black text-outline uppercase tracking-widest mt-6 hover:text-primary transition-colors">Dismiss All</button>
+</div>
+</section>
+<!-- Bottom Asymmetric Section: Inventory Detail -->
+<section class="grid grid-cols-1 lg:grid-cols-5 gap-8 pb-12">
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-[2rem] matte-shadow overflow-hidden">
+<div class="p-8 flex items-center justify-between">
+<h4 class="font-black text-xl tracking-tighter">Inventory Pulse</h4>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-xs font-bold">Showroom</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg text-xs font-bold">Godown</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-[10px] font-black uppercase tracking-widest text-outline">
+<th class="px-8 py-4">Item Identity</th>
+<th class="px-4 py-4">Status</th>
+<th class="px-4 py-4">Velocity</th>
+<th class="px-8 py-4 text-right">Unit Price</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline" data-icon="egg">egg</span>
+</div>
+<div>
+<p class="text-sm font-bold">Organic Eggs (Doz)</p>
+<p class="text-[10px] text-outline">SKU: EG-092-B</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold">In Stock</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-2">
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full">
+<div class="bg-primary w-[75%] h-full rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold">High</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right font-black text-sm">$4.99</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline" data-icon="local_drink">local_drink</span>
+</div>
+<div>
+<p class="text-sm font-bold">Sparkling Water 500ml</p>
+<p class="text-[10px] text-outline">SKU: WA-112-S</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-5">
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-[10px] font-bold">Low Stock</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-2">
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full">
+<div class="bg-secondary w-[90%] h-full rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold">Critical</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right font-black text-sm">$1.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-tertiary text-on-tertiary p-8 rounded-[2rem] matte-shadow relative overflow-hidden h-full flex flex-col justify-between">
+<!-- Background texture for depth -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Abstract Graphic" class="w-full h-full object-cover" data-alt="minimalist geometric pattern with repeating triangles and lines in deep earth tones matte finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAmsWWhY5eMXFzpX6LlgBqS4QTVTl58hH02qskDF3AVO2o4POH_6SF15dgoiC4s8Tn_jQeNPx4jJVrNN1Qzao-97roqECxKbuQ0mYHYUBcaQHgdQ8ykDLDgUX3WbIo74uWkzaS4vW9VoDsiUubjrTSMoiex-jw85NYgClAhsU-ZAJXfZUKCA2JfGcqVrxxVQ3fBkUL38N0n5NBqcu-n5c2z_WKTdG4giDph20vqkPGNSgvqiASkrs-0Fu1V3stjgaVMtBMQaxQZVw"/>
+</div>
+<div class="relative">
+<span class="text-[10px] font-black tracking-[0.3em] uppercase opacity-70">Premium Insight</span>
+<h5 class="text-2xl font-black mt-4 leading-tight">Customer Retention is up 14.5%</h5>
+<p class="text-sm mt-4 opacity-80 leading-relaxed">The loyalty program launched last month is showing strong uptake in the "Fresh Produce" category.</p>
+</div>
+<button class="relative w-max mt-8 bg-on-tertiary text-tertiary px-8 py-3 rounded-xl font-bold text-sm tracking-tight active:scale-[0.98] transition-transform">
+                            Download Strategy Report
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+</div>

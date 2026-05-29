@@ -1,0 +1,224 @@
+<div class="bg-surface text-on-surface antialiased abstract-bg w-full">
+
+    <div class="flex min-h-screen">
+        <!-- SideNavBar -->
+        <app-sidebar></app-sidebar>
+        <!-- Main Content -->
+        <main class="flex-1 w-full relative">
+            <!-- TopNavBar -->
+            <!-- Universal Top Header Component -->
+            <app-header [pageName]="'Tax & Compliance'"></app-header>
+            <!-- Page Content -->
+            <div class="p-8 space-y-8 overflow-y-auto">
+                <!-- Header & Hero Value -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <nav
+                            class="flex items-center gap-2 text-xs font-medium text-outline mb-2 uppercase tracking-widest">
+                            <span>Reports</span>
+                            <span class="material-symbols-outlined text-[10px]"
+                                data-icon="chevron_right">chevron_right</span>
+                            <span class="text-primary">Tax Reporting</span>
+                        </nav>
+                        <h2 class="text-4xl font-black tracking-tight text-on-surface">Tax Compliance Center</h2>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl matte-shadow border-l-4 border-primary min-w-[320px]">
+                        <p class="text-xs font-bold text-outline uppercase tracking-wider mb-1">Total GST Liability
+                            (Current Month)</p>
+                        <div class="text-[3.5rem] font-black leading-none tracking-tighter text-primary">₹14,28,450
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-secondary font-bold text-sm">
+                            <span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                            <span>4.2% increase from last month</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Action Toolbar -->
+                <div class="flex flex-wrap items-center gap-4 py-2">
+                    <button
+                        class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                        Pay GST Now
+                    </button>
+                    <button
+                        class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-xl font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                        Generate E-Invoice
+                    </button>
+                    <button
+                        class="flex items-center gap-2 bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-xl font-bold hover:bg-surface-container-highest transition-all">
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Export JSON
+                    </button>
+                </div>
+                <!-- Bento Grid Layout -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <!-- GSTR-1 Summary -->
+                    <div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-xl matte-shadow">
+                        <div class="flex justify-between items-center mb-8">
+                            <div>
+                                <h3 class="text-xl font-black tracking-tight">GSTR-1 Summary</h3>
+                                <p class="text-sm text-outline">B2B and B2C Outward Supplies Statement</p>
+                            </div>
+                            <span
+                                class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-xs font-bold">READY
+                                TO FILE</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold text-outline uppercase">Taxable Value</p>
+                                <p class="text-2xl font-black">₹78,42,000</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold text-outline uppercase">Total Invoices</p>
+                                <p class="text-2xl font-black">1,248</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold text-outline uppercase">HSN Summary</p>
+                                <p class="text-2xl font-black">142 Codes</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 overflow-hidden rounded-xl bg-surface-container-low">
+                            <table class="w-full text-left text-sm">
+                                <thead class="bg-surface-container-high text-outline uppercase text-[10px] font-bold">
+                                    <tr>
+                                        <th class="px-6 py-4">Category</th>
+                                        <th class="px-6 py-4">Count</th>
+                                        <th class="px-6 py-4 text-right">Taxable Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-surface-container-high">
+                                    <tr class="hover:bg-surface-container transition-colors">
+                                        <td class="px-6 py-4 font-bold">B2B Invoices (4A, 4B, 4C)</td>
+                                        <td class="px-6 py-4 text-outline">842</td>
+                                        <td class="px-6 py-4 text-right font-medium">₹52,10,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container transition-colors">
+                                        <td class="px-6 py-4 font-bold">B2C Large (5A, 5B)</td>
+                                        <td class="px-6 py-4 text-outline">120</td>
+                                        <td class="px-6 py-4 text-right font-medium">₹12,40,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container transition-colors">
+                                        <td class="px-6 py-4 font-bold">B2C Small (7)</td>
+                                        <td class="px-6 py-4 text-outline">286</td>
+                                        <td class="px-6 py-4 text-right font-medium">₹13,92,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- IGST Overview -->
+                    <div class="md:col-span-4 space-y-6">
+                        <div class="bg-primary p-8 rounded-xl matte-shadow text-on-primary">
+                            <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined"
+                                    data-icon="account_balance">account_balance</span>
+                                IGST Overview
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="pb-4 border-b border-white/10">
+                                    <p class="text-xs font-medium text-on-primary/70 uppercase">Inter-State Supply</p>
+                                    <p class="text-3xl font-black mt-1">₹4,20,500</p>
+                                </div>
+                                <div class="pb-4 border-b border-white/10">
+                                    <p class="text-xs font-medium text-on-primary/70 uppercase">Export Taxable</p>
+                                    <p class="text-3xl font-black mt-1">₹1,15,000</p>
+                                </div>
+                                <div class="pt-2">
+                                    <p class="text-xs font-medium text-on-primary/70 uppercase">ITC Claimable</p>
+                                    <p class="text-3xl font-black mt-1">₹85,240</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Filing Archive Mini List -->
+                        <div class="bg-surface-container-lowest p-6 rounded-xl matte-shadow">
+                            <h3 class="text-sm font-bold uppercase tracking-tight text-outline mb-4">Filing Archive</h3>
+                            <div class="space-y-3">
+                                <div
+                                    class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-secondary" data-icon="check_circle"
+                                            data-weight="fill">check_circle</span>
+                                        <div>
+                                            <p class="text-xs font-bold">Sept 2023</p>
+                                            <p class="text-[10px] text-outline">Filed on 11 Oct</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="file_download">file_download</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-secondary" data-icon="check_circle"
+                                            data-weight="fill">check_circle</span>
+                                        <div>
+                                            <p class="text-xs font-bold">Aug 2023</p>
+                                            <p class="text-[10px] text-outline">Filed on 09 Sept</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="file_download">file_download</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-secondary" data-icon="check_circle"
+                                            data-weight="fill">check_circle</span>
+                                        <div>
+                                            <p class="text-xs font-bold">July 2023</p>
+                                            <p class="text-[10px] text-outline">Filed on 12 Aug</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="file_download">file_download</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full mt-4 py-2 text-[10px] font-black uppercase text-primary hover:underline">View
+                                Full Archive</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Secondary Reports Section -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface-container-lowest p-6 rounded-xl matte-shadow flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+                            <span class="material-symbols-outlined" data-icon="receipt">receipt</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">TDS Certificates</h4>
+                            <p class="text-xs text-outline mt-1">Manage and download Section 194 certificates.</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl matte-shadow flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">E-Way Bill Status</h4>
+                            <p class="text-xs text-outline mt-1">12 Pending, 45 Active, 2 Expired recently.</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl matte-shadow flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined" data-icon="verified">verified</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Compliance Score</h4>
+                            <p class="text-xs text-outline mt-1">Currently 98/100 based on timely filings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Decorative Background Elements -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute -top-[10%] -left-[5%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full"></div>
+        <div class="absolute -bottom-[10%] -right-[5%] w-[30%] h-[30%] bg-secondary/5 blur-[100px] rounded-full"></div>
+    </div>
+
+</div>
